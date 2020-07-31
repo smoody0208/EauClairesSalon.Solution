@@ -18,5 +18,5 @@
   <p>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId})</p>
 }
 
-<button>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</button>
-<button>@Html.ActionLink("Remove Stylist", "Delete", new { id = Model.StylistId})</button>
+<button class="btn btn-info btn-lg">@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</button>
+<button class="btn btn-info btn-lg">@Html.ActionLink("Remove Stylist", "Delete", new { id = Model.StylistId})</button>
