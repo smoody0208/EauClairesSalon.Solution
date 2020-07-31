@@ -55,6 +55,53 @@ Running the program:
 1. To run the program, you'll need to compile the code: `dotnet build`. This will create a compiled application in the bin/ folder.
 2. Alternately, you can run the program directly with `dotnet run`.
 
+## MySQL Installation and Setup
+
+1. Download the MySQL Web Installer from the [MySQL Downloads re](https://dev.mysql.com/downloads/file/?id=484914) with the "No thanks, just start my download" link.
+2. Follow along with the installer:
+* Click "Yes" if prompted to update.
+* Accept license terms.
+* Choose Custom setup type.
+* When prompted to Select Products and Features, choose the following:
+  * MySQL Server 8.0.19 (This will be under "MySQL Servers > MySQL Server > MySQL Server 8.0")
+  * MySQL Workbench 8.0.19 (This will be under "Applications > MySQL Workbench > MySQL Workbench 8.0")
+* Select "Next", then "Execute". Wait for download and installation. (This can take a few minutes.)
+* Advance through Configuration as follows:
+  * High Availability set to "Standalone".
+  * "Defaults are OK" under Type and Networking.
+  * Authentication Method set to Use Legacy Authentication Method.
+  * Set password to epicodus. You can use your own if you want but epicodus will be assumed in the lessons.
+  * Defaults are OK under Windows Service. Make sure that checkboxes are checked for the options "Configure MySQL Server as a Windows Service" and "Start the MySQL Server at System Startup". Under Run Windows Service as..., the "Standard System Account" should be selected.
+* Complete Installation process.
+
+Create a local database:
+1. Open MySQL WorkBench and the click on Local Insstance 3306.
+2. Click the plus symbol in the top left corner of the window "Create a new SQL tab for executing queries"
+3. Then copy and pase the following code into the window to create your database.
+
+```
+DROP DATABASE IF EXISTS `spencer_moody`;
+CREATE DATABASE `spencer_moody`;
+
+DROP TABLE IF EXISTS `clients`;
+CREATE TABLE `clients` (
+  `ClientId` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  `ContactInfo` varchar(255) DEFAULT NULL,
+  `StylistId` int DEFAULT '0',
+  PRIMARY KEY (`ClientId`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+DROP TABLE IF EXISTS `stylists`;
+CREATE TABLE `stylists` (
+  `StylistId` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  `Specialty` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`StylistId`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+```
+
+
 ## Bugs
 
 No bugs
