@@ -57,7 +57,7 @@ Running the program:
 
 ## MySQL Installation and Setup
 
-1. Download the MySQL Web Installer from the [MySQL Downloads re](https://dev.mysql.com/downloads/file/?id=484914) with the "No thanks, just start my download" link.
+1. Download the MySQL Web Installer from the [MySQL Downloads](https://dev.mysql.com/downloads/file/?id=484914) with the "No thanks, just start my download" link.
 2. Follow along with the installer:
 * Click "Yes" if prompted to update.
 * Accept license terms.
@@ -101,6 +101,7 @@ CREATE TABLE `stylists` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
 
+4. Once the following code has been added to the window click "Execute the selected portion of the script or everything, if there is no selection" (it is the lightning bolt icon).
 
 ## Bugs
 
@@ -109,7 +110,9 @@ No bugs
 ## Tech used
 
 * C#
-* .NET
+* .NET Core
+* Entity Framework
+* MySQL
 
 ### License
 
