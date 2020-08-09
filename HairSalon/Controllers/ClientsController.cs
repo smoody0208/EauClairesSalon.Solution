@@ -38,7 +38,8 @@ namespace HairSalon.Controllers
 
     public ActionResult Details(int id)
     {
-      Client thisClient = _db.Clients.FirstOrDefault(clients => clients.ClientId == id);
+      // List<Client> thisClient = _db.Clients.Where(clients => clients.ClientId == id).ToList(); Search()
+      Client thisClient = _db.Clients.FirstOrDefault(clients => clients.ClientId == id); 
       return View(thisClient);
     }
 

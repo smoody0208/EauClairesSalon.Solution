@@ -45,7 +45,6 @@ namespace HairSalon
       {
         await context.Response.WriteAsync("Uh Oh Something went wrong! No haircuts today");
       });
-
     }
   }
 }

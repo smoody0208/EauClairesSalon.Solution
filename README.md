@@ -83,6 +83,8 @@ Create a local database:
 DROP DATABASE IF EXISTS `spencer_moody`;
 CREATE DATABASE `spencer_moody`;
 
+USE `spencer_moody`;
+
 DROP TABLE IF EXISTS `clients`;
 CREATE TABLE `clients` (
   `ClientId` int NOT NULL AUTO_INCREMENT,
